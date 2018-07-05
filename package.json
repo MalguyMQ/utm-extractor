@@ -8,10 +8,10 @@
     "prepublish": "npm run build",
     "test": "babel-node spec/support/run.js"
   },
-  "homepage": "https://github.com/MalguyMQ/utm-parser",
-  "bugs": "",
-  "keywords":"#utm #parser #query",
-  "author": "",
+  "homepage": "https://github.com/MalguyMQ/utm-extractor",
+  "bugs": "https://github.com/MalguyMQ/utm-extractor/issues",
+  "keywords":"#utm #parser #query #marketing",
+  "author": "MalguyMQ",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
