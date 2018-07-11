@@ -65,7 +65,7 @@ export class Utm {
     }
 
     if(this.url.charAt(0) === '?' || this.url.indexOf('?') > 0) {
-      this.removeValueBeforeParameters();
+      Utm.removeValueBeforeParameters();
       return this.get();
     }
   }
