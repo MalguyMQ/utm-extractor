@@ -16,7 +16,7 @@ Platform:
 npm manifest: 
   {
     "name": "utm-extractor",
-    "version": "1.0.1",
+    "version": "1.0.5",
     "description": "Parse queryString and extract each utm parameters",
     "main": "./dist/index.js",
     "scripts": {
@@ -24,10 +24,10 @@ npm manifest:
       "prepublish": "npm run build",
       "test": "babel-node spec/support/run.js"
     },
-    "homepage": "https://github.com/MalguyMQ/utm-parser",
-    "bugs": "",
-    "keywords":"#utm #parser #query",
-    "author": "",
+    "homepage": "https://github.com/MalguyMQ/utm-extractor",
+    "bugs": "https://github.com/MalguyMQ/utm-extractor/issues",
+    "keywords":"#utm #parser #query #marketing",
+    "author": "MalguyMQ",
     "license": "ISC",
     "devDependencies": {
       "babel-cli": "^6.26.0",
@@ -37,8 +37,7 @@ npm manifest:
       "babel-preset-es2015": "^6.24.1",
       "jasmine": "^3.1.0",
       "jasmine-core": "^3.1.0",
-      "jasmine-expect": "^3.8.3",
-      "npm-tuto-publish": "1.0.0"
+      "jasmine-expect": "^3.8.3"
     },
     "unmockedModulePathPatterns": ["jasmine-expect"]
   }
@@ -1099,10 +1098,6 @@ Lockfile:
     dependencies:
       ignore-walk "^3.0.1"
       npm-bundled "^1.0.1"
-  
-  npm-tuto-publish@1.0.0:
-    version "1.0.0"
-    resolved "https://registry.yarnpkg.com/npm-tuto-publish/-/npm-tuto-publish-1.0.0.tgz#902e13d25d90258e747015c336e05b3fa7c3d461"
   
   npmlog@^4.0.2:
     version "4.1.2"
