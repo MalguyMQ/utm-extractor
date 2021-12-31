@@ -11,37 +11,6 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Utm = exports.Utm = function () {
-  _createClass(Utm, null, [{
-    key: 'removeValueBeforeParameters',
-    value: function removeValueBeforeParameters() {
-      return this.url = this.url.substr(this.url.indexOf('?')).replace('?', '&');
-    }
-  }, {
-    key: 'removeOthersParametersThanUtm',
-    value: function removeOthersParametersThanUtm(object) {
-
-      var utmObject = {
-        utm_source: "",
-        utm_medium: "",
-        utm_campaign: "",
-        utm_term: "",
-        utm_content: ""
-      };
-
-      return Utm.compareObjectAndRemovePropertyNotInFirstObject(utmObject, object);
-    }
-  }, {
-    key: 'compareObjectAndRemovePropertyNotInFirstObject',
-    value: function compareObjectAndRemovePropertyNotInFirstObject(utmObject, object) {
-      for (var prop in object) {
-        if (!utmObject.hasOwnProperty(prop)) {
-          delete object[prop];
-        }
-      }
-      return object;
-    }
-  }]);
-
   function Utm(url) {
     _classCallCheck(this, Utm);
 
@@ -51,10 +20,8 @@ var Utm = exports.Utm = function () {
   _createClass(Utm, [{
     key: 'extractParamsFromQueryString',
     value: function extractParamsFromQueryString() {
-
       var queryObject = Object.create({});
       var arrayOfParameters = this.url.split('&');
-
       arrayOfParameters.forEach(function (e) {
         if (e.includes('=')) {
           var pair = [].concat(_toConsumableArray(e.split('=')));
@@ -89,6 +56,33 @@ var Utm = exports.Utm = function () {
         Utm.removeValueBeforeParameters();
         return this.get();
       }
+    }
+  }], [{
+    key: 'removeValueBeforeParameters',
+    value: function removeValueBeforeParameters() {
+      return this.url = this.url.substr(this.url.indexOf('?')).replace('?', '&');
+    }
+  }, {
+    key: 'removeOthersParametersThanUtm',
+    value: function removeOthersParametersThanUtm(object) {
+      var utmObject = {
+        utm_source: "",
+        utm_medium: "",
+        utm_campaign: "",
+        utm_term: "",
+        utm_content: ""
+      };
+      return Utm.compareObjectAndRemovePropertyNotInFirstObject(utmObject, object);
+    }
+  }, {
+    key: 'compareObjectAndRemovePropertyNotInFirstObject',
+    value: function compareObjectAndRemovePropertyNotInFirstObject(utmObject, object) {
+      for (var prop in object) {
+        if (!utmObject.hasOwnProperty(prop)) {
+          delete object[prop];
+        }
+      }
+      return object;
     }
   }]);
 

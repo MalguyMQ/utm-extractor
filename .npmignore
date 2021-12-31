@@ -1,1 +1,3 @@
-source
+src
+node_modules
+.idea
