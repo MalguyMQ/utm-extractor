@@ -1,10 +1,10 @@
-#Install utm-extractor
+# Install utm-extractor
 
 ````
 yarn add utm-extractor or npm install utm-extractor --save
 ````
 
-#Usage
+# Usage
 ````
 import {Utm} from 'utm-extractor'
 const utm = new Utm('?utm_source=Google&utm_medium=cpc&utm_campaign=spring_sale&utm_term=running+shoes&utm_content=logolink')
