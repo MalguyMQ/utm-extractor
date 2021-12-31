@@ -15,6 +15,7 @@ describe("Extract UTM tracking module information", () => {
       'utm_content=' + utmContent + '&' +
       'test=&a=&'
     const utm = new Utm(url);
+
     expect(utm.get()).toEqual({
       utm_source : "Google",
       utm_medium: "cpc",
@@ -43,7 +44,7 @@ describe("Extract UTM tracking module information", () => {
       utm_medium: "cpc",
       utm_campaign: "spring_sale",
       utm_term: 'running+shoes',
-      utm_content: 'logo'
+      utm_content: 'logolink'
     });
   });
 
@@ -57,5 +58,4 @@ describe("Extract UTM tracking module information", () => {
       message: "Please, insert a valid url"
     });
   });
-
 });

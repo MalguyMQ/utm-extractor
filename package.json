@@ -10,18 +10,20 @@
   },
   "homepage": "https://github.com/MalguyMQ/utm-extractor",
   "bugs": "https://github.com/MalguyMQ/utm-extractor/issues",
-  "keywords":"#utm #parser #query #marketing",
+  "keywords": "#utm #parser #query #marketing",
   "author": "MalguyMQ",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^8.2.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
-    "jasmine": "^3.1.0",
-    "jasmine-core": "^3.1.0",
-    "jasmine-expect": "^3.8.3"
+    "jasmine": "^3.10.0",
+    "jasmine-core": "^3.10.1",
+    "jasmine-expect": "^5.0.0"
   },
-  "unmockedModulePathPatterns": ["jasmine-expect"]
+  "unmockedModulePathPatterns": [
+    "jasmine-expect"
+  ]
 }

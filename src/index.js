@@ -1,11 +1,13 @@
 export class Utm {
+  constructor(url) {
+    this.url = url;
+  }
 
   static removeValueBeforeParameters() {
     return this.url = this.url.substr(this.url.indexOf('?')).replace('?', '&');
   }
 
   static removeOthersParametersThanUtm(object) {
-
     const utmObject = {
       utm_source : "",
       utm_medium: "",
@@ -13,7 +15,6 @@ export class Utm {
       utm_term: "",
       utm_content: ""
     };
-
     return Utm.compareObjectAndRemovePropertyNotInFirstObject(utmObject, object);
   }
 
@@ -26,15 +27,9 @@ export class Utm {
     return object;
   }
 
-  constructor(url) {
-    this.url = url;
-  }
-
   extractParamsFromQueryString() {
-
     let queryObject = Object.create({});
     const arrayOfParameters = this.url.split('&');
-
     arrayOfParameters.forEach((e) => {
       if(e.includes('=')) {
         const pair = [...e.split('=')];
@@ -48,7 +43,7 @@ export class Utm {
   }
 
   get() {
-    if(this.url.length === 0) {
+    if (this.url.length === 0) {
       throw {
         name: "Error",
         message: "Please, insert a valid url"
